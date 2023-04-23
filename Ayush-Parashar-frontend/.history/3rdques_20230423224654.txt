@@ -1,0 +1,7 @@
+There are many 
+
+setSelectedIndex should be declared using useState rather than as a function.
+The onClickHandler function in WrappedSingleListItem is being called immediately on render. Instead, it should be wrapped in an arrow function to be called only when the list item is clicked.
+isSelected should be set to a boolean value indicating whether the current index matches the selected index.
+items in WrappedListComponent should be initialized to an empty array instead of null.
+The propTypes for items should be updated to correctly use the arrayOf and shape validators.

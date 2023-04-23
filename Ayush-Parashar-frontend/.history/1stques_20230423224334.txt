@@ -1,0 +1,9 @@
+The List component is a React component that renders a list of items passed to it as a prop named "items". It uses the "WrappedListComponent" as its main component, which renders a list of "SingleListItem" components based on the items in the "items" array.
+
+Each "SingleListItem" component displays the "text" prop passed to it and highlights the background color of the component to green if it is "selected", or to red if it is not "selected". The "index" prop passed to the component is used to identify the item in the list, and the "onClickHandler" prop is a function that is called when the item is clicked.
+
+The List component uses the useState hook to maintain the state of the currently selected item's index. It initializes the "selectedIndex" state variable to null, which indicates that no item is selected. It also uses the useEffect hook to reset the "selectedIndex" state variable to null when a new set of items is passed as a prop to the component.
+
+The List component maps over the items array and renders a "SingleListItem" component for each item in the list, passing the necessary props to each component. The "SingleListItem" component is memoized using the memo function to improve performance.
+
+Finally, the List component exports the "WrappedListComponent" component, which is memoized using the memo function to prevent unnecessary re-renders of the component.
